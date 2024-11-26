@@ -1,0 +1,14 @@
+diff --git a/./ffmpeg/tools/Makefile b/./local_setup/tools/Makefile
+index 4afa233..5a0db94 100644
+--- a/./ffmpeg/tools/Makefile
++++ b/./local_setup/tools/Makefile
+@@ -2,6 +2,9 @@ TOOLS = enum_options qt-faststart scale_slice_test trasher uncoded_frame
+ TOOLS-$(CONFIG_LIBMYSOFA) += sofa2wavs
+ TOOLS-$(CONFIG_ZLIB) += cws2fws
+ 
++tools/orig_target_dec_%_fuzzer.o: tools/orig_target_dec_fuzzer.c
++	$(COMPILE_C) -DFFMPEG_DECODER=$*
++
+ tools/target_dec_%_fuzzer.o: tools/target_dec_fuzzer.c
+ 	$(COMPILE_C) -DFFMPEG_DECODER=$*
+ 
