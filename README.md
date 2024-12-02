@@ -1,6 +1,6 @@
-# Twinfuzz Artifact Evaluation NDSS 2025
+# TWINFUZZ Artifact Evaluation NDSS 2025
 
-This repository contains the code for the academic prototype presented in the paper **"TwinFuzz: Differential Testing of Video Hardware Acceleration Stacks,"** published at NDSS 2025.
+This repository contains the code for the academic prototype presented in the paper **"TWINFUZZ: Differential Testing of Video Hardware Acceleration Stacks,"** published at NDSS 2025.
 
 **Author List:** Matteo Leonelli, Addison Crump, Meng Wang, Florian Bauckholt, Keno Hassler, Ali Abbasi, Thorsten Holz.
 
@@ -10,12 +10,12 @@ This README provides an overview of the artifact presented in our **TwinFuzz** p
 
 ## Description & Requirements
 
-This section outlines all the information necessary to recreate the experimental environment for running our artifact. 
+This section provides all the details required to set up the experimental environment needed to run our artifact.
 To run the Dockerfile locally, your machine must support video hardware acceleration, have Intel VAAPI drivers, and an x86-64 CPU.
 
 ### Requirements
 
-1. **Access Instructions**: The artifact is publicly available via a Zenodo link. The repository includes a Dockerfile for an __intel-linux__ setup.
+1. **Access Instructions**: The artifact is publicly available via a [Zenodo link](https://doi.org/10.5281/zenodo.14222438). The repository includes a Dockerfile for an __intel-linux__ setup.
 
 2. **Hardware Requirements**: To reproduce our experiments, your machine must have video hardware acceleration, Intel VAAPI drivers, and an Intel x86-64 CPU.
 
@@ -25,7 +25,7 @@ To run the Dockerfile locally, your machine must support video hardware accelera
 
 ## Major Claims
 
-- **(C1):** We propose a technique for *indirectly* guiding a vanilla fuzzer that abstracts over a hardware acceleration stack that is otherwise difficult to introspect.
+- **(C1):** We propose a technique for *indirectly* guiding an unmodified fuzzer to abstract over a hardware acceleration stack that is otherwise difficult to introspect.
 - **(C2):** We present a new method for testing video hardware acceleration stacks. We derive a differential oracle that may indicate the presence of both correctness and security-relevant faults by differentially testing software implementations against the corresponding full hardware acceleration stack.
 - **(C3):** We implement a prototype of our approach in a tool called `TWINFUZZ`, capable of fuzzing a specific hardware acceleration stack, providing an observable difference and potentially triggering memory safety bugs using memory sanitizers.
 
@@ -38,7 +38,7 @@ This subsection refers to the folder __local_setup__ in the repository. To build
 ./run_docker.sh
 ```
 
-This script builds the Docker image as follows.
+This script builds and runs the Docker image as follows.
 
 To build the docker container, use the following command:
 ```bash
@@ -65,7 +65,7 @@ You can customize the script by modifying parameters directly in the bash script
 
 ## Results Reproduction
 
-After running the default evaluation, you will find ten folders (each corresponding to a trial), named `ffmpeg_AV_CODEC_H264_fuzzer_trial_X` (where `X` represents an integer from 1 to 10). Each folder contains a corpus folder and a potential list of discovered crashes. Additionally, you may find `hw_frame.pgm` and `sw_frame.pgm` files if the tool found observable differences.
+After running the default evaluation, you will find ten folders (each corresponding to a trial) named `ffmpeg_AV_CODEC_H264_fuzzer_trial_X` (where `X` represents an integer from 1 to 10). Each folder contains a corpus folder and a potential list of discovered crashes. Additionally, you may find `hw_frame.pgm` and `sw_frame.pgm` files if the tool found observable differences.
 
 To reproduce a crash, run the `ffmpeg_AV_CODEC_H264_fuzzer` binary from the `/out` directory and provide the input file corresponding to the crash:
 
