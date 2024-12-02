@@ -15,7 +15,7 @@ To run the Dockerfile locally, your machine must support video hardware accelera
 
 ### Requirements
 
-1. **Access Instructions**: The artifact is publicly available via Zenodo(https://doi.org/10.5281/zenodo.14259574). The repository includes a Dockerfile for an __intel-linux__ setup.
+1. **Access Instructions**: The artifact is publicly available via [Zenodo](https://doi.org/10.5281/zenodo.14259574). The repository includes a Dockerfile for an __intel-linux__ setup.
 
 2. **Hardware Requirements**: To reproduce our experiments, your machine must have video hardware acceleration, Intel VAAPI drivers, and an Intel x86-64 CPU.
 
