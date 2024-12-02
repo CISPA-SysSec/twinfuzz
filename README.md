@@ -6,7 +6,7 @@ This repository contains the code for the academic prototype presented in the pa
 
 ## Intro 
 
-This README provides an overview of the artifact presented in our **TwinFuzz** paper, along with step-by-step instructions for running it locally or remotely. The artifact enables the reproduction of key results from the paper, focusing on the crash experiment using a specific hardware/software configuration. To facilitate artifact evaluation, a Dockerfile is included, containing all necessary files to build the prototype on a **Linux-Intel** machine.
+This README provides an overview of the artifact presented in our **TwinFuzz** paper, along with step-by-step instructions for running it locally. The artifact enables the reproduction of key results from the paper, focusing on the crash experiment using a specific hardware/software configuration. To facilitate artifact evaluation, a Dockerfile is included, containing all necessary files to build the prototype on a **linux-intel** machine.
 
 ## Description & Requirements
 
