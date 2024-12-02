@@ -1,6 +1,6 @@
 # TWINFUZZ Artifact Evaluation NDSS 2025
 
-This repository contains the code for the academic prototype presented in the paper **"TWINFUZZ: Differential Testing of Video Hardware Acceleration Stacks,"** published at NDSS 2025.
+This repository contains the code for the academic prototype presented in the paper **"TWINFUZZ: Differential Testing of Video Hardware Acceleration Stacks"** published at NDSS 2025.
 
 **Author List:** Matteo Leonelli, Addison Crump, Meng Wang, Florian Bauckholt, Keno Hassler, Ali Abbasi, Thorsten Holz.
 
